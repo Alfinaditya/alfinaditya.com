@@ -6,5 +6,25 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
-}
+  plugins: [
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-emotion`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/src/contents/blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/src/contents/projects`,
+      },
+    },
+  ],
+};
