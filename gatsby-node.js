@@ -33,14 +33,14 @@ exports.createPages = async ({ graphql, actions }) => {
     actions.createPage({
       path: `/project/${project.frontmatter.slug}`,
       component: projectDetailsTemplate,
-      context: { id: project.frontmatter.slug },
+      context: { slug: project.frontmatter.slug },
     });
   });
   blogs.allMarkdownRemark.nodes.forEach(blog => {
     actions.createPage({
       path: `/blog/${blog.frontmatter.slug}`,
       component: blogDetailsTemplate,
-      context: { id: blog.frontmatter.slug },
+      context: { slug: blog.frontmatter.slug },
     });
   });
 };

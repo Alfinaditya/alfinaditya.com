@@ -16,6 +16,9 @@
   "dependencies": {
     "@emotion/react": "^11.6.0",
     "@emotion/styled": "^11.6.0",
+    "@styled-icons/heroicons-outline": "^10.36.0",
+    "@styled-icons/heroicons-solid": "^10.36.0",
+    "@styled-icons/simple-icons": "^10.45.0",
     "gatsby": "^4.2.0",
     "gatsby-plugin-emotion": "^7.2.0",
     "gatsby-plugin-image": "^2.2.0",

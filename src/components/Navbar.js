@@ -1,13 +1,45 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import {
+  BrandStyledNavLink,
+  Left,
+  Nav,
+  Right,
+  StyledNavLink,
+  SwitchContainer,
+  Switch,
+  SwitchIcon,
+  StyledContactLink,
+} from './Navbar.style';
 
-const Navbar = () => {
+const Navbar = ({ switchToggler, setSwitchToggler, themeToggler }) => {
   return (
-    <nav>
-      <Link to='/'>Home</Link>
-      <Link to='/blog'>Blog</Link>
-      <a href='mailto:alfinaditia02@gmail.com'>Contact</a>
-    </nav>
+    <Nav>
+      <Left>
+        <BrandStyledNavLink to='/'>Alfin Aditya</BrandStyledNavLink>
+      </Left>
+      <Right>
+        <StyledNavLink activeStyle={{ fontWeight: 'bold' }} to='/'>
+          Home
+        </StyledNavLink>
+        <StyledNavLink activeStyle={{ fontWeight: 'bold' }} to='/blog'>
+          Blog
+        </StyledNavLink>
+        <StyledContactLink href='mailto:alfinaditia02@gmail.com'>
+          Contact
+        </StyledContactLink>
+        <SwitchContainer>
+          <Switch
+            type='checkbox'
+            onChange={e => {
+              setSwitchToggler(e.target.checked);
+              themeToggler();
+            }}
+            checked={switchToggler}
+          />
+          <SwitchIcon />
+        </SwitchContainer>
+      </Right>
+    </Nav>
   );
 };
 
