@@ -9,7 +9,6 @@ const Layout = ({ children }) => {
   const windowGlobal = typeof window !== 'undefined' && window;
   const [theme, setTheme] = useState(undefined);
   const [switchToggler, setSwitchToggler] = useState(undefined);
-  console.log(windowGlobal.localStorage.getItem('userTheme'));
   useEffect(() => {
     const item =
       windowGlobal.localStorage.getItem('userTheme') === null

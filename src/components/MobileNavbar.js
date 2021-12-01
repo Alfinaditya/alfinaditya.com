@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   BrandStyledNavLink,
   StyledNavLink,
@@ -15,9 +15,10 @@ import {
 const MobileNavbar = ({ switchToggler, setSwitchToggler, themeToggler }) => {
   const windowGlobal = typeof window !== 'undefined' && window;
   const [open, setOpen] = useState(false);
-  const [userTheme, setUserTheme] = useState(
-    windowGlobal.localStorage.getItem('userTheme')
-  );
+  const [userTheme, setUserTheme] = useState(undefined);
+  useEffect(() => {
+    setUserTheme(windowGlobal.localStorage.getItem('userTheme'));
+  }, []);
 
   return (
     <MobileNav>
