@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
 import { ThemeProvider } from '@emotion/react';
 import themes from './Theme.style';
-import { windowGlobal } from '../const';
 import GlobalStyle from './GlobalStyle';
 import MobileNavbar from './MobileNavbar';
 
 const Layout = ({ children }) => {
-  const [theme, setTheme] = useState('light');
-  const [switchToggler, setSwitchToggler] = useState(false);
+  const windowGlobal = typeof window !== 'undefined' && window;
+  const [theme, setTheme] = useState(undefined);
+  const [switchToggler, setSwitchToggler] = useState(undefined);
+  console.log(windowGlobal.localStorage.getItem('userTheme'));
   useEffect(() => {
     const item =
       windowGlobal.localStorage.getItem('userTheme') === null
