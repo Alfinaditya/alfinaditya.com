@@ -12,6 +12,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-emotion`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -27,4 +28,10 @@ module.exports = {
       },
     },
   ],
+  siteMetadata: {
+    title: 'Alfin Aditya',
+    description: 'Hi i’m Alfin👏 i’m a Web Developer',
+    image: 'src/contents/assets/logo.png',
+    url: 'http://alfinaditya.com/',
+  },
 };

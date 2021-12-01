@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 
-export const Container = styled.div`
+export const Blogs = styled.div`
   max-width: 605px;
   margin: auto;
   @media only screen and (min-width: 769px) {
@@ -9,6 +9,9 @@ export const Container = styled.div`
   }
   margin-top: 120px;
   margin-bottom: 120px;
+  div {
+    margin-bottom: 40px;
+  }
 `;
 
 export const Title = styled.h1`

@@ -13,11 +13,16 @@ import {
   LinksMD,
   LinksSM,
 } from './project-details.style';
+import Seo from '../components/Seo';
 
 const projectDetails = ({ data }) => {
   const project = data.markdownRemark.frontmatter;
   return (
     <Layout>
+      <Seo
+        title={`${project.title} | Alfin Aditya`}
+        description={project.description}
+      />
       <Container>
         <LinksMD>
           <a href={project.liveVersion} rel='noreferrer' target='_blank'>

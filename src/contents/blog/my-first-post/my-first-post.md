@@ -1,6 +1,7 @@
 ---
 category: blog
 title: My First Post
+description: This is my first post
 slug: my-first-post
 date: 22 November 2021
 ---

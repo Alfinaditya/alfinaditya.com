@@ -1,13 +1,15 @@
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import React from 'react';
 import Layout from '../components/Layout';
-import { Container, Date, Title, ReadMore, Content } from './blog.style';
+import Seo from '../components/Seo';
+import { Blogs, Date, Title, ReadMore, Content } from './blog.style';
 
 const Blog = ({ data }) => {
   const blogs = data.allMarkdownRemark.nodes;
   return (
     <Layout>
-      <Container>
+      <Seo title='Blog | Alfin Aditya' description="Alfin Aditya's Blog" />
+      <Blogs>
         {blogs.map((blog, i) => (
           <div key={i}>
             <Title>{blog.frontmatter.title}</Title>
@@ -18,7 +20,7 @@ const Blog = ({ data }) => {
             </ReadMore>
           </div>
         ))}
-      </Container>
+      </Blogs>
     </Layout>
   );
 };

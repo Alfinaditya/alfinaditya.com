@@ -9,11 +9,16 @@ import {
   Title,
 } from './blog-details.style';
 import Layout from '../components/Layout';
+import Seo from '../components/Seo';
 
 const BlogDetails = ({ data }) => {
   const blog = data.markdownRemark;
   return (
     <Layout>
+      <Seo
+        title={`${blog.frontmatter.title} | Alfin Aditya`}
+        description={blog.frontmatter.description}
+      />
       <Container>
         <Header>
           <Title>{blog.frontmatter.title}</Title>
@@ -38,6 +43,7 @@ export const query = graphql`
     ) {
       frontmatter {
         title
+        description
         date
         category
         slug
