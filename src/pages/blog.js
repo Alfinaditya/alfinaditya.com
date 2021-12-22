@@ -13,9 +13,6 @@ const Blogs = styled.div`
   }
   margin-top: 120px;
   margin-bottom: 120px;
-  div {
-    margin-bottom: 40px;
-  }
 `;
 
 const Title = styled.h1`
@@ -24,12 +21,20 @@ const Title = styled.h1`
   color: ${props => props.theme.text};
 `;
 
-const Content = styled.p`
+const Content = styled.div`
   height: 75px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   color: ${props => props.theme.text};
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 `;
 
 const Date = styled.p`
