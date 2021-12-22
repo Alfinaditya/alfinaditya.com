@@ -38,9 +38,9 @@ const Layout = ({ children }) => {
   return (
     <div>
       <ThemeProvider theme={theme === 'light' ? themes.light : themes.dark}>
-        <GlobalStyle />
         {theme !== undefined && (
           <>
+            <GlobalStyle />
             <MobileNavbar
               switchToggler={switchToggler}
               setSwitchToggler={setSwitchToggler}
