@@ -56,6 +56,7 @@ export const Title = styled.h2`
   margin-bottom: 10px;
   font-size: 16px;
   font-weight: 500;
+  cursor: pointer;
   color: ${props => props.theme.text};
 `;
 

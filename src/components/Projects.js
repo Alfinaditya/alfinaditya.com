@@ -37,7 +37,11 @@ const Projects = () => {
               onClick={() => navigate(`/project/${project.frontmatter.slug}`)}
             />
             <div>
-              <Title>{project.frontmatter.title}</Title>
+              <Title
+                onClick={() => navigate(`/project/${project.frontmatter.slug}`)}
+              >
+                {project.frontmatter.title}
+              </Title>
 
               <Links>
                 <StyledLink
