@@ -39,17 +39,21 @@ const Layout = ({ children }) => {
     <div>
       <ThemeProvider theme={theme === 'light' ? themes.light : themes.dark}>
         <GlobalStyle />
-        <MobileNavbar
-          switchToggler={switchToggler}
-          setSwitchToggler={setSwitchToggler}
-          themeToggler={themeToggler}
-        />
-        <Navbar
-          switchToggler={switchToggler}
-          setSwitchToggler={setSwitchToggler}
-          themeToggler={themeToggler}
-        />
-        {children}
+        {theme !== undefined && (
+          <>
+            <MobileNavbar
+              switchToggler={switchToggler}
+              setSwitchToggler={setSwitchToggler}
+              themeToggler={themeToggler}
+            />
+            <Navbar
+              switchToggler={switchToggler}
+              setSwitchToggler={setSwitchToggler}
+              themeToggler={themeToggler}
+            />
+            {children}
+          </>
+        )}
       </ThemeProvider>
     </div>
   );
