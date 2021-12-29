@@ -32,6 +32,6 @@ module.exports = {
     title: 'Alfin Aditya',
     description: 'Hi i’m Alfin👏 i’m a Web Developer',
     image: 'src/contents/assets/logo.png',
-    url: 'http://alfinaditya.com/',
+    url: 'https://www.alfinaditya.com',
   },
 };

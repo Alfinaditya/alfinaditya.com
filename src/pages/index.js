@@ -8,7 +8,7 @@ import Seo from '../components/Seo';
 export default function Home() {
   return (
     <Layout>
-      <Seo title='Home | Alfin Aditya' description="Alfin Aditya's Blog" />
+      <Seo title='Home | Alfin Aditya' />
       <div
         css={css`
           margin-bottom: 50px;
