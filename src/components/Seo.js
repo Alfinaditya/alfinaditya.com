@@ -15,25 +15,31 @@ const Seo = ({ title, description, image }) => {
     image: `${siteUrl}${image || defaultImage}`,
     url: `${siteUrl}${pathname}`,
   };
-
+  console.log(seo);
   return (
     <div>
       <Helmet>
+        {/* HTML Tags */}
         <title>{seo.title}</title>
-        <meta property='og:site_name' content={seo.title} />
-        <link rel='canonical' href={seo.url} />
-        <meta name='keywords' content='Website Alfin Aditya' />
-        <meta property='og:type' content='website' />
-        <meta name='image' content={seo.image} />
-        <meta name='twitter:image' content={seo.image} />
-        <meta property='og:image' content={seo.image} />
-        <meta name='twitter:title' content={seo.title} />
-        <meta property='og:title' content={seo.title} />
         <meta name='description' content={seo.description} />
+
+        {/* Google / Search Engine Tags */}
+        <meta itemprop='name' content={seo.title} />
+        <meta itemprop='description' content={seo.description} />
+        <meta itemprop='image' content={seo.image} />
+
+        {/* Facebook Meta Tags*/}
+        <meta property='og:url' content={seo.title} />
+        <meta property='og:type' content='website' />
+        <meta property='og:title' content={seo.title} />
         <meta property='og:description' content={seo.description} />
+        <meta property='og:image' content={seo.image} />
+
+        {/* Twitter Meta Tags*/}
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:title' content={seo.title} />
         <meta name='twitter:description' content={seo.description} />
-        <meta name='twitter:url' content={seo.url} />
-        <meta property='og:url' content={seo.url} />
+        <meta name='twitter:image' content={seo.description} />
       </Helmet>
     </div>
   );
