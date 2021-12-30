@@ -11,9 +11,9 @@ import {
   HamburgerMenu,
   MobileLinks,
 } from './MobileNavbar.style';
+import { windowGlobal } from '../const';
 
 const MobileNavbar = ({ switchToggler, setSwitchToggler, themeToggler }) => {
-  const windowGlobal = typeof window !== 'undefined' && window;
   const [open, setOpen] = useState(false);
   const [userTheme, setUserTheme] = useState(undefined);
   useEffect(() => {

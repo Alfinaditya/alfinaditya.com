@@ -4,9 +4,9 @@ import { ThemeProvider } from '@emotion/react';
 import themes from './Theme.style';
 import GlobalStyle from './GlobalStyle';
 import MobileNavbar from './MobileNavbar';
+import { windowGlobal } from '../const';
 
 const Layout = ({ children }) => {
-  const windowGlobal = typeof window !== 'undefined' && window;
   const [theme, setTheme] = useState(undefined);
   const [switchToggler, setSwitchToggler] = useState(undefined);
   useEffect(() => {
