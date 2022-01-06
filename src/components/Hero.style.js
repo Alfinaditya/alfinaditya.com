@@ -50,19 +50,19 @@ export const DownloadCV = styled.button`
   border: 0;
 `;
 
-export const ProfilePicture = styled.div`
-  margin: auto;
-  width: 90px;
-  height: 90px;
-  font-size: 60px;
-  background: #e5e5e5;
-  border-radius: 50%;
-  span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-`;
+// export const ProfilePicture = styled.div`
+//   margin: auto;
+//   width: 90px;
+//   height: 90px;
+//   font-size: 60px;
+//   background: #e5e5e5;
+//   border-radius: 50%;
+//   span {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//   }
+// `;
 
 export const GithubIcon = styled(Github)`
   width: 24px;

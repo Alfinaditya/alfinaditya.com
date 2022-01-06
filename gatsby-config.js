@@ -14,6 +14,32 @@ module.exports = {
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
     {
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [
+      {
+        resolve: `gatsby-remark-images`,
+        options: {
+            maxWidth: 605,
+          },
+      },
+      {
+        resolve: `gatsby-remark-vscode`,
+        options: {
+            theme: 'Default Dark+',
+              inlineCode: {
+              marker: '•',
+              theme: {
+                default: 'Default Light+',
+                dark: 'Default Dark+'
+              }
+            }
+        }
+      }
+      ],
+    },
+  },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
