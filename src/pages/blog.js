@@ -13,6 +13,9 @@ const Blogs = styled.div`
   }
   margin-top: 120px;
   margin-bottom: 120px;
+  div {
+    margin-bottom: 30px;
+  }
 `;
 
 const Title = styled.h1`
@@ -21,24 +24,13 @@ const Title = styled.h1`
   color: ${props => props.theme.text};
 `;
 
-const Content = styled.div`
-  height: 75px;
+const Description = styled.div`
   color: ${props => props.theme.text};
-  p,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+  margin: 10px 0;
 `;
 
 const Date = styled.p`
-  margin: 7px 0;
+  margin: 15px 0;
   color: ${props => props.theme.text};
 `;
 
@@ -58,7 +50,7 @@ const Blog = ({ data }) => {
           <div key={i}>
             <Title>{blog.frontmatter.title}</Title>
             <Date>{blog.frontmatter.date}</Date>
-            <Content dangerouslySetInnerHTML={{ __html: blog.html }} />
+            <Description>{blog.frontmatter.description}</Description>
             <ReadMore to={`/blog/${blog.frontmatter.slug}`}>
               Read More...
             </ReadMore>
@@ -75,11 +67,11 @@ export const query = graphql`
       nodes {
         frontmatter {
           title
+          description
           date
           slug
           date
         }
-        html
       }
     }
   }

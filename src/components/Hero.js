@@ -8,7 +8,6 @@ import {
   HeroContainer,
   IconContainer,
   LinkedInIcon,
-  ProfilePicture,
 } from './Hero.style';
 import { css } from '@emotion/react';
 import CV from '../contents/assets/CV.pdf';
@@ -16,9 +15,6 @@ import CV from '../contents/assets/CV.pdf';
 const Hero = () => {
   return (
     <HeroContainer>
-      <ProfilePicture>
-        <span>👨</span>
-      </ProfilePicture>
       <Description>
         <div>
           <h1>Hi i’m Alfin</h1>

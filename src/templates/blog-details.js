@@ -22,6 +22,12 @@ const Header = styled.div`
   margin-bottom: 30px;
 `;
 
+const Content= styled.div`
+  p{
+    margin: 15px 0;
+  }
+`;
+
 const Title = styled.h1`
   font-size: 30px;
   font-weight: bold;
@@ -53,7 +59,7 @@ const BlogDetails = ({ data }) => {
           <Title>{blog.frontmatter.title}</Title>
           <p>{blog.frontmatter.date}</p>
         </Header>
-        <div dangerouslySetInnerHTML={{ __html: blog.html }} />
+        <Content dangerouslySetInnerHTML={{ __html: blog.html }} />
         <BackToHomepage onClick={() => navigate(-1)}>
           <BackIcon />
           Back to homepage
@@ -74,7 +80,6 @@ export const query = graphql`
         title
         description
         date
-        category
         slug
       }
       html

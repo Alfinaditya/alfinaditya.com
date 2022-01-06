@@ -30,6 +30,7 @@ export const MobileLinks = styled.div`
   position: absolute;
   width: 100%;
   flex-direction: column;
+  z-index: 100;
 `;
 export const StyledNavLink = styled(Link)`
   text-decoration: none;
@@ -69,7 +70,7 @@ export const HamburgerMenuContainer = styled.div`
   position: absolute;
   top: 30px;
   right: 20px;
-  z-index: 2;
+  z-index: 999;
   cursor: pointer;
 `;
 

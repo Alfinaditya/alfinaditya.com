@@ -21,6 +21,9 @@ const Navbar = ({ switchToggler, setSwitchToggler, themeToggler }) => {
         <StyledNavLink activeStyle={{ fontWeight: 'bold' }} to='/'>
           Home
         </StyledNavLink>
+        <StyledNavLink activeStyle={{ fontWeight: 'bold' }} to='/about'>
+          About Me
+        </StyledNavLink>
         <StyledNavLink activeStyle={{ fontWeight: 'bold' }} to='/blog'>
           Blog
         </StyledNavLink>
