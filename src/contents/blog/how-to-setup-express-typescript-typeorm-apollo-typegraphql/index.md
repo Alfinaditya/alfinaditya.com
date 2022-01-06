@@ -1,4 +1,5 @@
 ---
+id: 1
 title: How to setup Node Express Typescript Typeorm Apollo TypegraphQL
 category: blog
 description: My GraphQL setup for big project

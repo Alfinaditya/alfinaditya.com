@@ -1,16 +1,20 @@
 ---
-title: Simple HTTP request in Rust 
+id: 2
+title: Simple HTTP request in Rust
 category: blog
 description: The easiest way to make an HTTP Request in Rust
-slug: simple-http-request-in-rust 
+slug: simple-http-request-in-rust
 date: 6 November 2022
 ---
 
 First Create a new project using cargo
+
 ```bash
 cargo new httprequest
 ```
+
 Next we are gonna install some depedencies like reqwest and Tokio (To make an HTTP Request),serde and serde_json (To convert the data to JSON format).
+
 ```toml
 [package]
 name = "httprequest"
@@ -23,15 +27,19 @@ tokio = { version = "1", features = ["full"] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 ```
+
 And then run the project, to install the depedencies
+
 ```bash
 cargo run
 ```
+
 Next we are going to write code to make an HTTP Request.
 
 In this example i'm using https://jsonplaceholder.typicode.com/posts for the JSON API,you can use any API you want.
 
 First let's see our JSON response,the plan is we are going to convert this JSON Structure to Rust Struct,You can use tools Like https://transform.tools/json-to-rust-serde, because im gonna use that website to convert my JSON structure to Rust Struct.
+
 ```json
 [
   {
@@ -51,6 +59,7 @@ First let's see our JSON response,the plan is we are going to convert this JSON 
 ```
 
 After that the result looks like this
+
 ```rust
 use serde_derive::Deserialize;
 use serde_derive::Serialize;
@@ -67,7 +76,9 @@ pub struct Root2 {
 }
 
 ```
+
 And then you can Modify the struct
+
 ```rust
 use serde::{Deserialize, Serialize};
 
@@ -83,6 +94,7 @@ struct User {
 ```
 
 Next let's write our code
+
 ```rust
 use reqwest;
 use serde::{Deserialize, Serialize};
@@ -109,12 +121,15 @@ async fn main() {
 }
 
 ```
-run the project 
+
+run the project
+
 ```bash
 cargo run
 ```
 
 And the result looks like this, **congratulations** , you have successfully make a simple HTTP Request using Rust
+
 ```rust
 Ok(
     [
@@ -135,7 +150,9 @@ Ok(
 )
 
 ```
+
 You can also map the data using forloop
+
 ```rust
 #[tokio::main]
 async fn main() {
@@ -155,5 +172,6 @@ async fn main() {
 ```
 
 Refrences :
+
 - https://stackoverflow.com/questions/14154753/how-do-i-make-an-http-request-from-rust
 - https://blog.logrocket.com/making-http-requests-rust-reqwest/
