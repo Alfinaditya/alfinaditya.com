@@ -63,7 +63,10 @@ const Blog = ({ data }) => {
 
 export const query = graphql`
   query BLOG {
-    allMarkdownRemark(filter: { frontmatter: { category: { eq: "blog" } } }) {
+    allMarkdownRemark(
+      filter: { frontmatter: { category: { eq: "blog" } } }
+      sort: { fields: id, order: ASC }
+    ) {
       nodes {
         frontmatter {
           title
