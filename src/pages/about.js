@@ -33,6 +33,7 @@ const About = () => {
           alt='Alfin Aditya'
           width={105}
           height={105}
+          style={{ borderRadius: '50%' }}
           imgStyle={{ borderRadius: '50%' }}
           src='../contents/assets/me.webp'
         />
