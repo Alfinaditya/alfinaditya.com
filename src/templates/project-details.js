@@ -99,6 +99,7 @@ const LiveIcon = styled(Link)`
 
 const projectDetails = ({ data }) => {
   const project = data.markdownRemark.frontmatter;
+  console.log(data.markdownRemark.html);
   return (
     <Layout>
       <Seo
